@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Random Walk Challenge</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Random Walk Challenge</h1>
+    <p>
+      Press the arrow keys to move the stick figure forward or backward, or press the button to simulate a random walk.
+    </p>
+
+    <!-- Display Stick Figure on the Line -->
+    <div class="line">
+      <div id="stick-figure">
+        <div class="head"></div>
+        <div class="body"></div>
+        <div class="arms">
+          <div class="left-arm"></div>
+          <div class="right-arm"></div>
+        </div>
+        <div class="legs">
+          <div class="left-leg"></div>
+          <div class="right-leg"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Controls -->
+    <div class="controls">
+      <button id="random-walk">Start Random Walk</button>
+    </div>
+
+    <!-- Stats -->
+    <div class="stats">
+      <p>Steps Taken: <span id="steps-taken">0</span></p>
+      <p>Current Position: <span id="position">0</span></p>
+    </div>
+
+    <!-- Result -->
+    <div id="result"></div>
+  </div>
+
+  <!-- Analysis Section -->
+  <div class="analysis">
+    <h2>Analysis Results</h2>
+    <div id="analysis-charts">
+      <canvas id="trajectory-chart"></canvas>
+      <canvas id="run-length-chart"></canvas>
+      <canvas id="clt-chart"></canvas>
+    </div>
+    <div id="analysis-summary">
+      <p id="classification-result"></p>
+      <p id="mean-variance"></p>
+      <p id="run-length-summary"></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,162 @@
+/* General Body Styling */
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: #f4f4f9;
+  color: #333;
+  margin: 0;
+  padding: 20px;
+}
+
+/* Main Container */
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Header Styling */
+h1 {
+  margin-bottom: 20px;
+}
+
+p {
+  margin-bottom: 30px; /* Add more space below the introductory text */
+}
+
+/* Line and Stick Figure Styling */
+.line {
+  position: relative;
+  margin: 50px 0; /* Add more vertical space above and below the number line */
+  height: 10px;
+  background: #ccc;
+}
+
+#stick-figure {
+  position: absolute;
+  top: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.head {
+  width: 20px;
+  height: 20px;
+  background-color: #4CAF50;
+  border-radius: 50%;
+}
+
+.body {
+  width: 5px;
+  height: 40px;
+  background-color: #4CAF50;
+}
+
+.arms {
+  position: relative;
+  width: 40px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.left-arm, .right-arm {
+  width: 5px;
+  height: 30px;
+  background-color: #4CAF50;
+  transform-origin: top;
+  animation: arm-swing 0.4s alternate infinite;
+}
+
+.legs {
+  position: relative;
+  width: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.left-leg, .right-leg {
+  width: 5px;
+  height: 40px;
+  background-color: #4CAF50;
+  transform-origin: top;
+  animation: leg-swing 0.4s alternate infinite;
+}
+
+/* Controls Section */
+.controls {
+  margin-top: 40px; /* Add more space between the line and the "Simulate Random Walk" button */
+}
+
+.controls button {
+  font-size: 16px;
+  padding: 10px 20px;
+  margin: 10px;
+  border: none;
+  background-color: #4CAF50;
+  color: white;
+  cursor: pointer;
+}
+
+.controls button:hover {
+  background-color: #45a049;
+}
+
+/* Stats Section */
+.stats {
+  margin: 20px 0;
+  font-size: 18px;
+}
+
+/* Results Section */
+#result {
+  margin-top: 20px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* Animations for walking */
+@keyframes arm-swing {
+  from {
+    transform: rotate(30deg);
+  }
+  to {
+    transform: rotate(-30deg);
+  }
+}
+
+@keyframes leg-swing {
+  from {
+    transform: rotate(-30deg);
+  }
+  to {
+    transform: rotate(30deg);
+  }
+}
+
+/* Analysis Section */
+.analysis {
+  margin-top: 40px;
+}
+
+.analysis h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+#analysis-charts {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+canvas {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+#analysis-summary p {
+  font-size: 16px;
+  margin: 10px 0;
+}
